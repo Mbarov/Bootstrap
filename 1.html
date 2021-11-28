@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Верстка сайта на Bootstrap</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!--шапка сайта-->
+<nav class='navbar navbar-expand-md navbar-light bg-light sticky-top'>
+        <!--nav - для создания шапки(тот же div). exp-md - шапка на весь экран.sticky-top - приклеена к верху-->
+        <div class='container-fluid'>
+                    <!--class='container-fluid' блок будет растянут во всю ширину экрана-->
+            <a href="#" class='navbar-brad'><img src="img/logo.png" alt=""></a>
+            <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarResponsive'>
+            <span class="navber-toggler-icon"></span>
+            </button>
+            <div class='collapse navbar-collapse' id='navbarResponsive'>
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                <a href="#" class='nav-link'>Главная</a>
+                </li>
+                <li class="nav-item">
+                <a href="#" class='nav-link'>Про нас </a>
+                </li>
+                <li class="nav-item">
+                <a href="#" class='nav-link'>Контакты</a>
+                </li>
+                <li class="nav-item">
+                <a href="#" class='nav-link'>Сервисы</a>
+                </li>
+                <li class="nav-item">
+                <a href="#" class='nav-link'>Команда</a>
+                </li>                
+                
+                </ul>
+            </div>
+        </div>   
+        </nav> 
+            <!--
+            'navbar-brand' - для создания логотипов
+            navbar-toggler - создание кнопки для открывания меню
+            data-toggle='collapse' - кнопка,открывающая меню
+            data-target - объект, который будет раскрывать
+            navbar-nav - означает, что это именно список, предназначенный для меню
+            ml-auto - для того, чтобы меню была прижата сбоку справа / по центру
+            nav-link - Для ссылок в навигации
+            -->
+<!--Слайдер изображений-->
+<div class="container-fluid text-center">
+    <div class="carousel slide" data-ride="carousel" id='slides' >
+        <ul class='carousel-indicators'>
+            <li data-target='#slides' data-slide-to='0' class='active'></li>
+            <li data-target='#slides' data-slide-to='1' ></li>
+            <li data-target='#slides' data-slide-to='2' ></li>       
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/slider_1.jpg" alt="">
+                <div class="carousel-caption">
+                    <h1 class='display-2'>ITProger</h1>
+                    <h3>Научитесь программировать</h3>
+                    <button type='button' class="btn btn-outline-light btn-lg">Посмотреть</button>
+                    <button type='button' class="btn btn-warning btn-lg">Демо сайта</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/slider_2.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="img/slider_3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+    carousel - карусель фото
+    data-target='#slides' - указываем с каким слайдером работаем
+    data-slide-to='0' - указываем на какое изображение будем переходить
+    class='carousel-indicators' - сделал 3 полоски(скроллер)
+    <div class="carousel-inner"> - добавило картинки
+    class="carousel-carousel" - выравнивает все по центру
+    btn-lg - большая кнопка
+-->
+<!--Основной блок сайта-->
+<div class="container-fluid">
+    <div class="row jumbotron">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. At impedit quaerat voluptatibus praesentium nulla officiis. Consectetur suscipit corrupti veniam ea corporis labore aliquam ut quas eligendi vero. Officia, soluta fuga.</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <a href=""><button class="btn btn-success btn-lg" type='button'>Читать далее</button></a>
+        </div>
+    </div>
+</div>
+<!--
+    container-fluid - будет растягиваться на все 100% ширины экрана
+    jumbotron - делает блок серого цвета
+    col-xs-12 - при маленьком экране (xs) блок будет занимать все 12 колонок
+    sm - перевернутый телефон
+    md - планшет
+    lg - небольшой монитор
+    xl - большой монитор
+    -->
+<!--Блок с характеристиками-->
+<div class='container-fluid'>
+    <div class="row text-center alert">
+        <div class="col-12">
+            <h1 class="display-4">Создание сайтов</h1>
+            <hr>
+        </div>
+        <div class="col-12">
+            <p class="lead">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia incidunt tempora provident a totam sequi, magnam culpa dolore architecto voluptas quasi consequuntur dicta molestiae aperiam debitis eos cumque assumenda soluta.
+            </p>
+        </div>
+    </div>
+    </div>
+
+<!--
+    alert позволяет добавить различные отступы
+    hr - горизонтальная линия
+    -->
+<!--Блок с описанием языков-->
+<div class="container-fluid  padding">
+    <div class="row text-center padding">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <i class="fas fa-code"></i>
+            <h3>HTML5</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <i class="fas fa-bold"></i>
+            <h3>Bootstrap</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <i class="fab fa-css3"></i>
+            <h3>CSS3</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+        </div>       
+    </div>
+    <hr class='my-4'>
+    </div>
+<!--Простая секция с изображением-->
+<div class="container-fluid  padding">
+    <div class="row padding">
+        <div class="offset-lg-2 col-lg-4">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum corrupti explicabo nostrum mollitia blanditiis voluptatem commodi aut soluta provident ducimus.
+            <br><br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut impedit quisquam sapiente veniam, dignissimos, mollitia reiciendis, ullam molestias quis repellendus nam officiis velit odit id molestiae commodi qui nemo esse!
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eveniet ipsam provident architecto quidem. Iusto nulla asperiores nostrum consequuntur repellendus!
+            </p>
+            <br>
+            <a href="" class="btn btn-danger">Читать далее</a>
+        </div>
+        <div class="col-lg-6">
+            <br>
+            <img src="https://itproger.com/img/courses/1481188465.jpg" alt="" class="img-fluid">
+        </div>
+    </div>
+    </div>
+<!--class="offset-lg-2 - отступ перед div - 2 столбца
+    -->
+<!--Блок с фиксированным изображением-->
+<figure>
+    <div class="fixed-wrap">
+        <div id='fixed'>
+        </div>
+    </div>
+</figure>
+<!--Закрытая секция-->
+<div class="text-center">
+<button type='button'  id='giftsBtn' class='btn btn-success text-center' data-toggle='collapse' data-target='#gifs'>Открыть блок</button>
+</div>
+<div id='gifs' class='collapse'>
+    <div class="container-fluid padding-top">
+        <div class="row text-center">
+            <div class="col-sm-6 col-md-3">
+                <img src="img/1.jpg" class='gift' alt="">
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <img src="img/2.jpg" class='gift' alt="">
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <img src="img/3.jpg" class='gift' alt="">
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <img src="img/4.jpg" class='gift' alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!--Карточки с языками программирования-->
+<div class="container-fluid  padding">
+    <div class="row alert text-center">
+        <div class="col-12">
+            <h1 class="display-4">Языки программирования</h1>
+        </div>
+        <hr>
+    </div>
+</div>
+<div class="container padding">
+    <div class="row padding">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://itproger.com/img/courses/1520445191.jpg" alt=""class='card-img-top'>
+                <div class="cart-body">
+                    <h4 class="cart-title">Unreal Engine</h4>
+                    <p class="cart-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestiae laudantium corporis minus voluptates. Rerum quis nostrum debitis mollitia placeat!</p>
+                    <a href="" class="btn btn-warning">Посмотреть</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://itproger.com/img/courses/1518607198.jpg" alt=""class='card-img-top'>
+                <div class="cart-body">
+                    <h4 class="cart-title">PyGame</h4>
+                    <p class="cart-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestiae laudantium corporis minus voluptates. Rerum quis nostrum debitis mollitia placeat!</p>
+                    <a href="" class="btn btn-warning">Посмотреть</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://itproger.com/img/courses/1515581488.jpg" alt=""class='card-img-top'>
+                <div class="cart-body">
+                    <h4 class="cart-title">Java</h4>
+                    <p class="cart-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestiae laudantium corporis minus voluptates. Rerum quis nostrum debitis mollitia placeat!</p>
+                    <a href="" class="btn btn-warning">Посмотреть</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+<!--Футер-->
+<footer class="container-fluid">
+    <div class="container-fluid">
+        <div class="row padding text-center">
+            <div class="col-12">
+                <h2>Наши контакты</h2>
+            </div>
+            <div class="col-12 social padding">
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-youtube"></i></a>
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-google-plus-g"></i></a>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
